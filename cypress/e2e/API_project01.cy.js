@@ -34,7 +34,7 @@ describe("template spec", () => {
     });
 
     cy.task(
-      'runQuery', 'SELECT * FROM student WHERE email = \'Igor.strelka@example.net\'').then((rows) => {
+      'runQuery', `SELECT * FROM student WHERE email = \'${this.email}\'`).then((rows) => {
       expect(rows).to.have.length(1);
       const igor = rows[0];
 
@@ -56,7 +56,7 @@ describe("template spec", () => {
     });
 
     cy.task(
-      'runQuery', 'SELECT * FROM student WHERE email = \'Igor.strelka@example.net\'').then((rows) => {
+      'runQuery', `SELECT * FROM student WHERE email = \'${this.email}\'`).then((rows) => {
       expect(rows).to.have.length(1);
       const igor = rows[0];
 
@@ -82,7 +82,7 @@ describe("template spec", () => {
     });
 
     cy.task(
-      'runQuery', 'SELECT * FROM student WHERE email = \'Nettieasdaupdated7@example.net\'').then((rows) => {
+      'runQuery', `SELECT * FROM student WHERE email = \'${this.emailU}\'`).then((rows) => {
       expect(rows).to.have.length(1);
       const igor = rows[0];
 
@@ -103,7 +103,7 @@ describe("template spec", () => {
     });
 
     cy.task(
-      'runQuery', 'SELECT * FROM student WHERE email = \'Nettieasdaupdated7@example.net\'').then((rows) => {
+      'runQuery', `SELECT * FROM student WHERE email = \'${this.emailU}\'`).then((rows) => {
       expect(rows).to.have.length(1);
       const igor = rows[0];
 
